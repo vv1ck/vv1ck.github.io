@@ -1081,22 +1081,3 @@ maiN {
     right: 0;
     text-align: center;
     z-index: 999;}
-footer p {
-    margin: 10px 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida  Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
-footer .fa-heart{
-    color: red;}
-footer .fa-dev{
-    color: #fff;}
-footer .fa-twitter-square{
-  color:#1da0f1;}
-footer .fa-instagram{
-  color: #f0007c;}
-fotter .fa-linkedin{
-  color:#0073b1;}
-footer .fa-codepen{
-  color:#fff}
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-  margin-right:5px;}
