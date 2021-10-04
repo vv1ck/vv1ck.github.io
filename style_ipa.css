@@ -1,0 +1,1102 @@
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    min-height: 100vh;
+    flex-wrap: wrap;}
+maiN {
+  position: relative;
+  z-index: 1;
+  height: none;
+  overflow: hidden;
+  box-shadow: 0 0 50px #000;
+  transition: transform .5s;}
+.nev-open maiN {transform: scale(.8);}
+.nev-trigger {
+  position: fixed;
+  z-index: 4;
+  top: 40px;
+  right: 40px;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  color: transparent;
+  white-space: nowrap;
+  text-indent: 100%;}
+.nev-trigger span,
+.nev-trigger span::before,
+.nev-trigger span::after {
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  background: #FFF;}
+.nev-trigger span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 1.3s;}
+.nev-trigger span::before,
+.nev-trigger span::after {
+  content: '';
+  top: 0;
+  left: 0;
+  transition: background .3s, transform .3s;}
+.nev-trigger span::before {
+  transform: translateY(-12px);}
+.nev-trigger span::after {
+  transform: translateY(12px);}
+.nev-trigger:hover span, 
+.nev-trigger:hover span::before,
+.nev-trigger:hover span::after {
+  background: white;}
+.nev-open .nev-trigger span {
+  background: transparent;}
+.nev-open .nev-trigger span::before,
+.nev-open .nev-trigger span::after {
+  background: #1F2B3D;}
+.nev-open .nev-trigger span::before {
+  transform: rotate(-45deg);}
+.nev-open .nev-trigger span::after {
+  transform: rotate(45deg);}
+.nev-container {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 90%;
+  max-width: 415px;
+  padding: 2em 3.5em;
+  background: #00000075;
+  overflow: auto;
+  transform: translateZ(0);
+  transform: translateX(100%);
+  transition: transform .5s cubic-bezier(.07,.23,.34,1);}
+.nev-open .nev-container {
+  transform: translateX(0);}
+  .nev {
+  list-style: none;
+  padding: 0;}
+.nev a {
+  display: block;
+  padding: 1.3em 0;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: serif;
+  text-decoration: none;
+  color: #FFF;
+  transform: translateZ(0);}
+.nev-open .nev a {
+  animation: slide-in .4s .2s backwards;}
+.nev-open .nev li:nth-of-type(2) a {
+  animation-delay: .3s;}
+.nev-open .nev li:nth-of-type(3) a {
+  animation-delay: .4s;}
+.nev-open .nev li:nth-of-type(4) a {
+  animation-delay: .5s;}
+@keyframes slide-in {
+  0% {opacity: 0;
+    transform: translateX(80px);}
+  100% {opacity: 1;
+    transform: translateX(0);}}
+
+.pythonista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4px 0;}
+.pythonista .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 15px;
+    transition: .5s;}
+.pythonista .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #50C878;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.pythonista .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #fff;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.pythonista .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.pythonista .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.pythonista .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.pythonista .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;}
+.instagram .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.instagram .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #800080;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.instagram .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #fff;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.instagram .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.instagram .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.instagram .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.instagram .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.snapchat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4px 0;}
+.snapchat .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.snapchat .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #FFFF00;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.snapchat .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #353935;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.snapchat .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.snapchat .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.snapchat .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.snapchat .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #000;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;}
+.whatsapp .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.whatsapp .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #0BDA51;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.whatsapp .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFf;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.whatsapp .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.whatsapp .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.whatsapp .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.whatsapp .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.jodel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4px 0;}
+.jodel .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.jodel .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #FFA500;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.jodel .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFf;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.jodel .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.jodel .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.jodel .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.jodel .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.twitter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4px 0;}
+.twitter .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.twitter .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #87CEEB;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.twitter .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFf;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.twitter .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.twitter .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.twitter .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.twitter .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.tiktok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.tiktok .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.tiktok .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #F33A6A;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.tiktok .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFf;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.tiktok .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.tiktok .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.tiktok .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.tiktok .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+
+
+.facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.facebook .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.facebook .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #0096FF;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.facebook .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.facebook .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.facebook .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.facebook .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.facebook .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+
+.YouTube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.YouTube .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.YouTube .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #FF0000;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.YouTube .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.YouTube .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.YouTube .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.YouTube .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.YouTube .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+
+.movies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.movies .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.movies .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 0%;
+    height: 30%;
+    background: #E5E4E2;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.movies .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 70px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.movies .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.movies .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.movies .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.movies .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.shahid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.shahid .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.shahid .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #088F8F;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.shahid .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.shahid .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.shahid .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.shahid .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.shahid .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.MovieBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.MovieBox .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.MovieBox .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #FFC000;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.MovieBox .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.MovieBox .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.MovieBox .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.MovieBox .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.MovieBox .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.Cinemana {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.Cinemana .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.Cinemana .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #28282B;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.Cinemana .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.Cinemana .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.Cinemana .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.Cinemana .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.Cinemana .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+
+.Jailbreak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.Jailbreak .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.Jailbreak .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 0%;
+    height: 30%;
+    background: #E5E4E2;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.Jailbreak .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 70px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.Jailbreak .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.unc0ver .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.Jailbreak .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.Jailbreak .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.unc0ver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.unc0ver .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.unc0ver .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #E5E4E2;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.unc0ver .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #000;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.unc0ver .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.unc0ver .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.unc0ver .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.unc0ver .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+.Taurine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0;}
+.Taurine .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 2px;
+    transition: .5s;}
+.Taurine .box::after {
+    content: "";
+    position: absolute;
+    top: 9;
+    left: 35px;
+    width: 70%;
+    height: 30%;
+    background: #5D3FD3;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: .5s;}
+.Taurine .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .5s;
+    z-index: 1;}
+.Taurine .box:hover .content {
+    left: 0px;
+    padding: 60px 40px;}
+.Taurine .box .content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;}
+.Taurine .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;}
+.Taurine .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 5px;}
+    footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 15px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;}
+footer p {
+    margin: 10px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida  Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+footer .fa-heart{
+    color: red;}
+footer .fa-dev{
+    color: #fff;}
+footer .fa-twitter-square{
+  color:#1da0f1;}
+footer .fa-instagram{
+  color: #f0007c;}
+fotter .fa-linkedin{
+  color:#0073b1;}
+footer .fa-codepen{
+  color:#fff}
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+  margin-right:5px;}
