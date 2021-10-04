@@ -1,0 +1,20 @@
+body {
+    background: #cecece;
+    overflow: hidden;}
+
+
+  code {
+    font-family: monospace;
+    font-size: 13px;}
+  div {
+    background: #1d1f20;
+    border: 1px solid #242020;
+    border-radius: 15px;
+    margin: 15% 0% 0% 36%;
+    max-width: 368px;
+    padding: 15px;}
+  pre {
+    padding: 1px;}
+  span {
+    color: rgb(255, 255, 255);
+    padding-right: 6px;}
