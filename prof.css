@@ -1,0 +1,1059 @@
+
+    html {
+      background: linear-gradient(135deg, #2B7594 0%, #655900 100%);
+      overflow-x: hidden;
+      overflow-y: auto; 
+      font-family: 'Orbitron', sans-serif;
+    }
+    .speck {
+      opacity: 0;
+      height: 4px;
+      width: 4px;
+      background: url('http://i1272.photobucket.com/albums/y391/matthew_williams10/speck_zpsu9xym9zl.png');
+      background-size: cover;
+      position: absolute;
+      border-radius: 10px;
+      z-index: 99;
+    }
+    
+    .img {
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      top: -8500px;
+      left: -8000px;
+      animation-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      animation-name: float;
+      animation-iteration-count: infinite;
+    }
+    
+    #img-1 {
+      opacity: 0.25;
+      background: url('https://image.ibb.co/jcTvpv/dust1.jpg');
+      background-repeat: repeat;
+      animation-duration: 600s;
+    }
+    
+    #img-2 {
+      opacity: 0.2;
+      background: url('https://image.ibb.co/goU1Uv/dust2.jpg');
+      background-repeat: repeat;
+      animation-duration: 450s;
+    }
+    
+    #img-3 {
+      opacity: 0.15;
+      background: url('https://image.ibb.co/cymRwa/dust3.jpg');
+      background-repeat: repeat;
+      animation-duration: 350s;
+    }
+    /*ANIMATIONS*/
+    
+    @keyframes twinkle {
+      0% {
+        transform: translate(0px, 0px);
+      }
+      30% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.75;
+      }
+      70% {
+        opacity: 0;
+      }
+      100% {
+        transform: translate(175px, 100px);
+      }
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translate(0px, 0px);
+      }
+      100% {
+          transform:translate(8000px, 4000px);
+      }
+    }
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+.mctr{
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 38px;
+  line-height: 29px;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Noto Sans Display', sans-serif;
+}
+.bio{
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Noto Sans Display', sans-serif;
+}
+.mook{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  width: 100%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  box-shadow: 0 20px 45px 0 rgb(0 0 0 / 13%);
+  font-family: 'Noto Sans Display', sans-serif;
+  
+}
+.phprof{
+  width: 170px;
+  height: 100xp;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  font-family: 'Noto Sans Display', sans-serif;
+}
+.full-name {
+  font-size:25px;
+  user-select:none;
+  padding:10px;
+  color: #fff;
+  font-family: 'Noto Sans Display', sans-serif;
+}
+.KW{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  margin-left: -5px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #929292;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+    box-sizing: border-box;
+  }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Roboto", helvetica, arial, sans-
+    serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+  .telegram{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #2FA5DB;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    Overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: animate1 1s 1px linear-gradient(transparent,#0005);
+  }
+
+  .telegram:hover{
+    background: #2FA5DB;
+    color: #000;
+    box-shadow: 0 0 5px #2FA5DB,
+                0 0 25px #2FA5DB,
+                0 0 50px #2FA5DB,
+                0 0 200px #2FA5DB;
+  }
+  .telegram span{
+    position: absolute;
+    display: block;
+  }
+  .telegram span:nth-child(1){
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2FA5DB);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes  animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  .telegram span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2FA5DB);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes  animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  .telegram span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#2FA5DB);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes  animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  .telegram span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2FA5DB);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes  animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+  }
+  .instgram{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #D217A5;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    Overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: animate1 1s 1px linear-gradient(transparent,#0005);
+  }
+
+  .instgram:hover{
+    background: #D217A5;
+    color: #000;
+    box-shadow: 0 0 5px #D217A5,
+                0 0 25px #D217A5,
+                0 0 50px #D217A5,
+                0 0 200px #D217A5;
+  }
+  .instgram span{
+    position: absolute;
+    display: block;
+  }
+  .instgram span:nth-child(1){
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#D217A5);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes  animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  .instgram span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#D217A5);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes  animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  .instgram span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#D217A5);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes  animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  .instgram span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#D217A5);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes  animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+  }
+
+  .youtube{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #FE0000;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    Overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: animate1 1s 1px linear-gradient(transparent,#0005);
+  }
+
+  .youtube:hover{
+    background: #FE0000;
+    color: #000;
+    box-shadow: 0 0 5px #FE0000,
+                0 0 25px #FE0000,
+                0 0 50px #FE0000,
+                0 0 200px #FE0000;
+  }
+  .youtube span{
+    position: absolute;
+    display: block;
+  }
+  .youtube span:nth-child(1){
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#FE0000);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes  animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  .youtube span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#FE0000);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes  animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  .youtube span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#FE0000);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes  animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  .youtube span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#FE0000);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes  animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    } 
+  }
+  .steam{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #06173D;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    Overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: animate1 1s 1px linear-gradient(transparent,#0005);
+  }
+
+  .steam:hover{
+    background: #06173D;
+    color: #000;
+    box-shadow: 0 0 5px #06173D,
+                0 0 25px #06173D,
+                0 0 50px #06173D,
+                0 0 200px #06173D;
+  }
+  .steam span{
+    position: absolute;
+    display: block;
+  }
+  .steam span:nth-child(1){
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#06173D);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes  animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  .steam span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#06173D);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes  animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  .steam span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#06173D);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes  animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  .steam span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#06173D);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes  animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    } 
+  }
+  .salla{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #5CD5C4;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    Overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: animate1 1s 1px linear-gradient(transparent,#5CD5C4);
+  }
+
+  .salla:hover{
+    background: #5CD5C4;
+    color: #000;
+    box-shadow: 0 0 5px #5CD5C4,
+                0 0 25px #5CD5C4,
+                0 0 50px #5CD5C4,
+                0 0 200px #5CD5C4;
+  }
+  .salla span{
+    position: absolute;
+    display: block;
+  }
+  .salla span:nth-child(1){
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#5CD5C4);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes  animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  .salla span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#5CD5C4);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes  animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  .salla span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#5CD5C4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes  animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  .salla span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#5CD5C4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes  animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    } 
+  }
+  .tiktok{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    Overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: animate1 1s 1px linear-gradient(transparent,#fff);
+  }
+
+  .tiktok:hover{
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 5px #fff,
+                0 0 25px #fff,
+                0 0 50px #fff,
+                0 0 200px #fff;
+  }
+  .tiktok span{
+    position: absolute;
+    display: block;
+  }
+  .tiktok span:nth-child(1){
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#fff);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes  animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  .tiktok span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#fff);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes  animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  .tiktok span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#fff);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes  animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  .tiktok span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#fff);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes  animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    } 
+  }
+  .my-friend{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #000;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    Overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: animate1 1s 1px linear-gradient(transparent,#000);
+  }
+
+  .my-friend:hover{
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 5px #000,
+                0 0 25px #000,
+                0 0 50px #000,
+                0 0 200px #000;
+  }
+  .my-friend span{
+    position: absolute;
+    display: block;
+  }
+  .my-friend span:nth-child(1){
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#000);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes  animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  .my-friend span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#000);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes  animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  .my-friend span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#000);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes  animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  .my-friend span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#000);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes  animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    } 
+  }
+.Holy-Quran{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: blue;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    Overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: animate1 1s 1px linear-gradient(transparent,blue);
+  }
+
+  .Holy-Quran:hover{
+    background: blue;
+    color: #000;
+    box-shadow: 0 0 5px blue,
+                0 0 25px blue,
+                0 0 50px blue,
+                0 0 200px blue;
+  }
+  .Holy-Quran span{
+    position: absolute;
+    display: block;
+  }
+  .Holy-Quran span:nth-child(1){
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,blue);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes  animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  .Holy-Quran span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,blue);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes  animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  .Holy-Quran span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,blue);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes  animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  .Holy-Quran span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,blue);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes  animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+    /* جدول */
+  }
+  div.table-title {
+    display: block;
+   margin: auto;
+   max-width: 600px;
+   padding:5px;
+   width: 100%;
+ }
+ 
+ .table-title h3 {
+    color: #fafafa;
+    font-size: 30px;
+    font-weight: 400;
+    font-style:normal;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform:uppercase;
+ }
+ 
+ 
+ /*** Table Styles **/
+ 
+ .table-fill {
+   background: white;
+   border-radius:3px;
+   border-collapse: collapse;
+   height: 320px;
+   margin: auto;
+   max-width: 600px;
+   padding:5px;
+   width: 100%;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+   animation: float 5s infinite;
+ }
+  
+ th {
+   color:#D5DDE5;;
+   background:#1b1e24;
+   border-bottom:4px solid #9ea7af;
+   border-right: 1px solid #343a45;
+   font-size:23px;
+   font-weight: 100;
+   padding:24px;
+   text-align:left;
+   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+   vertical-align:middle;
+ }
+ 
+ th:first-child {
+   border-top-left-radius:3px;
+ }
+  
+ th:last-child {
+   border-top-right-radius:3px;
+   border-right:none;
+ }
+   
+ tr {
+   border-top: 1px solid #C1C3D1;
+   border-bottom: 1px solid #C1C3D1;
+   color:#666B85;
+   font-size:16px;
+   font-weight:normal;
+   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+ }
+  
+ tr:hover td {
+   background:#4E5066;
+   color:#FFFFFF;
+   border-top: 1px solid #22262e;
+ }
+  
+ tr:first-child {
+   border-top:none;
+ }
+ 
+ tr:last-child {
+   border-bottom:none;
+ }
+  
+ tr:nth-child(odd) td {
+   background:#EBEBEB;
+ }
+  
+ tr:nth-child(odd):hover td {
+   background:#4E5066;
+ }
+ 
+ tr:last-child td:first-child {
+   border-bottom-left-radius:3px;
+ }
+  
+ tr:last-child td:last-child {
+   border-bottom-right-radius:3px;
+ }
+  
+ td {
+   background:#FFFFFF;
+   padding:20px;
+   text-align:left;
+   vertical-align:middle;
+   font-weight:300;
+   font-size:18px;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   border-right: 1px solid #C1C3D1;
+ }
+ 
+ td:last-child {
+   border-right: 0px;
+ }
+ 
+ th.text-left {
+   text-align: left;
+ }
+ 
+ th.text-center {
+   text-align: center;
+ }
+ 
+ th.text-right {
+   text-align: right;
+ }
+ 
+ td.text-left {
+   text-align: left;
+ }
+ 
+ td.text-center {
+   text-align: center;
+ }
+ 
+ td.text-right {
+   text-align: right;
+ }
+ 
