@@ -5,5 +5,3 @@ app=Flask(__name__)
 @app.route("/hi")
 def om():
     return "oefjppppppppp"
-
-app.run()
