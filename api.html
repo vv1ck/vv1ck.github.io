@@ -1,159 +1,37 @@
-
+<!DOCTYPE html>
 <html lang="en">
-	<head
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible">
-	<base target="_blank">
-	<img class="logo" src="https://k.top4top.io/p_21082tdh10.jpeg" style="size: 100;font-size: 100;" oncontextmenu="return false" tabindex="0" galleryimg="no">
-	<hr>
-	<link rel="shortcut icon"  type="image/jpg" href="https://k.top4top.io/p_21082tdh10.jpeg">
-	<title>Api Home</title>
-	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type="text/javascript"></script>
-	<script scr="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
-    <link rel="stylesheet" href="style_api.css">
-	</head>
-	<body>
-  <a href="#navigation" class="nev-trigger">
-    Menu <span></span>
-  </a>
-  <nev class="nev-container" id="navigation">
-    <ul class="nev">
-      <li><a href="https://vv1ck.github.io/home">Home</a></li>
-      <li><a href="https://filza2.github.io/Home">Filza Home</a></li>
-    </ul></nev>
-  <script>
-  var navTrigger = document.getElementsByClassName('nev-trigger')[0],
-  body = document.getElementsByTagName('body')[0];
-  navTrigger.addEventListener('click', toggleNavigation);
-  function toggleNavigation(event) {
-    event.preventDefault();
-    body.classList.toggle('nev-open');}
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="code_api.css">
+    <script src="style_api.js"></script>
+</head>
+<body>
+    
 
+    <h2>Api-email :</h2>
+    <pre> <code class="language-js"><p>// url = https://jftv.pythonanywhere.com/email=put@email.com</p>
+ <p>import requests</p>
+ <p>email = input('Enter email : ')</p>
+ <p>sent = requests.get('https://jftv.pythonanywhere.com/email='+email).text</p>
+ <p>if 'True' in sent: print('Email is Not available')</p>
+ <p>else: print('Email is available')</p></code></pre>
+    <h2>Api-Number info :</h2>
+    <pre> <code class="language-js"><p>// url = https://jftv.pythonanywhere.com/Number-Info/country code/ phone number</p>
+ <p>import requests</p>
+ <p>print(
+    requests.get('https://jftv.pythonanywhere.com/Number-Info/'+input('country code : ')+'/'+input('Enter number : ')
+    ).text
+   )</p></code></pre>
+    <h2>Api-Proxy :</h2>
+    <pre> <code class="language-js"><p>// url = https://jftv.pythonanywhere.com/Proxy/Protocol here Like (https/http/socks4/5)</p>
+ <p>import requests</p>
+ <p>print(
+    requests.get('https://jftv.pythonanywhere.com/Proxy/'+input('Enter Protocol here Like (https/http/socks4/5) : ')
+    ).text
+   )</p></code></pre>
 
-
-<div class="apiBlock">
-  <div class="apiTop">
-    <p class="apiTitle">Api-Email vaild </p>
-  </div> 
-  <div class="linkDiv">
-  <input id="em_insta"  type="text" readonly="" class="apiLink" value="https://jftv.pythonanywhere.com/email=put@email.com">
-  <button class="Copy" onclick="email()" ><i class="far fa-clipboard"></i></button>
-  <button class="Copy"><a href="https://vv1ck.github.io/email.py"><span class="material-icons-outlined">code</span></a></button>
-  </div></div>
-  <script>
-    function email() {
-      var copyText = document.getElementById("em_insta");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);}
-    </script>
-
-
-<div class="apiBlock">
-  <div class="apiTop">
-    <p class="apiTitle">Api-ip Info</p>
-  </div> 
-  <div class="linkDiv">
-  <input id="email_tw"  type="text" readonly="" class="apiLink" value="https://jftv.pythonanywhere.com/ip/Ip here">
-  <button class="Copy" onclick="email_tw()" ><i class="far fa-clipboard"></i></button>
-  <button class="Copy"><a href="https://vv1ck.github.io/ip.py"><span class="material-icons-outlined">code</span></a></button>
-  </div></div>
-  <script>
-    function email_tw() {
-      var copyText = document.getElementById("email_tw");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);}
-    </script>
-
-
-<div class="apiBlock">
-  <div class="apiTop">
-    <p class="apiTitle">Api-Number info</p>
-  </div> 
-  <div class="linkDiv">
-  <input id="login-appleid" type="text" readonly="" class="apiLink" value="https://jftv.pythonanywhere.com/Number-Info/country code / phone number">
-  <button class="Copy" onclick="login_appleid()" ><i class="far fa-clipboard"></i></button>
-  <button class="Copy"><a href="https://vv1ck.github.io/number.py"><span class="material-icons-outlined">code</span></a></button>
-  </div></div>
-  <script>
-    function login_appleid() {
-      var copyText = document.getElementById("login-appleid");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);}
-    </script>
-  
-
-  <div class="apiBlock">
-    <div class="apiTop">
-      <p class="apiTitle">Api-Proxy</p>
-    </div> 
-    <div class="linkDiv">
-    <input id="info_number" type="text" readonly="" class="apiLink" value="https://jftv.pythonanywhere.com/Proxy/Protocol here Like (https/http/socks4/5)">
-    <button class="Copy" onclick="info_number()" ><i class="far fa-clipboard"></i></button>
-    <button class="Copy"><a href="https://vv1ck.github.io/proxy.py"><span class="material-icons-outlined">code</span></a></button>
-    </div></div>
-    <script>
-      function info_number() {
-        var copyText = document.getElementById("info_number");
-        copyText.select();
-        copyText.setSelectionRange(0, 99999)
-        document.execCommand("copy");
-        alert("Copied the text: " + copyText.value);}
-      </script>
-  
-  
-<div class="apiBlock">
-  <div class="apiTop">
-    <p class="apiTitle">SOON ..</p>
-  </div> 
-  <div class="linkDiv">
-  <input id="ch_ig"  type="text" readonly="" class="apiLink" value="https://....">
-  <button class="Copy" onclick="check()" ><i class="far fa-clipboard"></i></button>
-  </div></div>
-  <script>
-    function check() {
-      var copyText = document.getElementById("ch_ig");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);}
-    </script>
-
-
-<div class="apiBlock">
-  <div class="apiTop">
-    <p class="apiTitle">SOON ..</p>
-  </div> 
-  <div class="linkDiv">
-  <input id="inf_insta" type="text" readonly="" class="apiLink" value="https://....">
-  <button class="Copy" onclick="info()" ><i class="far fa-clipboard"></i></button>
-  </div></div>
-  <script>
-    function info() {
-      var copyText = document.getElementById("inf_insta");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);}
-    </script>
-
-
-	<!-- -->
-	<div align="center"><div class="embeds">
-	</div>
-	</div><div id="particle"></div>
-	<script src="particles.js/2.0.0/particles.min.js" type="text/javascript"></script>
-	<script type="text/javascript">
-	var options = {"particles":{"number":{"value":30,"density":{"enable":true,"value_area":552.4033491425909}},"color":{"value":"#15ff00"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":3},"image":{"src":"img/github.svg","width":70,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":2,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":100,"color":"#00ff00","opacity":1.0,"width":1},"move":{"enable":true,"speed":1.0782952832645452,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"grab"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":200,"line_linked":{"opacity":1}},"bubble":{"distance":100,"size":90,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":false};
-	particlesJS("particle", options)
-	</script>
-	</script>
-	</body>
-	</html>
+</body>
+</html>
