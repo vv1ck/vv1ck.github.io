@@ -23,7 +23,7 @@ function adjustTextDirection(textarea) {
              conversations: [],
              selected_conversation: null,
              container: '.chat-ai',
-             chat_speed: 0,
+             chat_speed: 15,
              title: 'Joka Bot',
              max_tokens: 100,
              version: '1.0.0',
