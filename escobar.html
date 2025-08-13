@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>ESCOBAR - The Legend</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="escobar-logo">
+                <img src="assets/escobar_portrait.png" alt="Escobar" class="loading-image">
+                <div class="loading-text">
+                    <h1 class="loading-title">ESCOBAR</h1>
+                    <p class="loading-subtitle">The Legend Awakens</p>
+                </div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+        <div class="smoke-effect"></div>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="audio/escobar.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="main-website" class="main-website hidden">
+        <div class="animated-bg">
+            <div class="bg-layer layer1"></div>
+            <div class="bg-layer layer2"></div>
+            <div class="bg-layer layer3"></div>
+        </div>
+ 
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>ESCOBAR</h1>
+                        <span class="tagline">PUBG LEGEND</span>
+                    </div>
+                    <nav class="nav">
+                        <a href="#profile" class="nav-link">Profile</a>
+                        <a href="#stats" class="nav-link">Stats</a>
+                        <a href="#videos" class="nav-link">Videos</a>
+                        <a href="#achievements" class="nav-link">Achievements</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+ 
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-image">
+                        <div class="image-frame">
+                            <img src="assets/escobar_portrait.png" alt="Escobar" class="profile-image">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+                    <div class="hero-info" id="profile">
+                        <h1 class="hero-title">
+                            <span class="title-main">ESCOBAR</span>
+                            <span class="title-sub">The legend</span>
+                        </h1>
+                        <div class="hero-details">
+                            <div class="detail-item">
+                                <i class="fab fa-tiktok"></i>
+                                <div class="detail-content">
+                                    <span class="detail-label">TikTok</span>
+                                    <span class="detail-value">@q9999x</span>
+                                    <button class="copy-btn" onclick="copyToClipboard('q9999x')">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-gamepad"></i>
+                                <div class="detail-content">
+                                    <span class="detail-label">PUBG Name</span>
+                                    <span class="detail-value">mK</span>
+                                    <button class="copy-btn" onclick="copyToClipboard('mK')">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-hashtag"></i>
+                                <div class="detail-content">
+                                    <span class="detail-label">UUID</span>
+                                    <span class="detail-value">5165280664</span>
+                                    <button class="copy-btn" onclick="copyToClipboard('5165280664')">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <div class="stats-ticker" id="stats">
+            <div class="ticker-content">
+                <div class="ticker-item">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>KILLS: 15,847</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-trophy"></i>
+                    <span>WINS: 2,341</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-target"></i>
+                    <span>HEADSHOTS: 8,923</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-medal"></i>
+                    <span>RANK: CONQUEROR</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-fire"></i>
+                    <span>K/D RATIO: 4.7</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-clock"></i>
+                    <span>PLAYTIME: 1,247H</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-users"></i>
+                    <span>SQUAD WINS: 1,892</span>
+                </div>
+                <div class="ticker-item">
+                    <i class="fas fa-bullseye"></i>
+                    <span>ACCURACY: 87%</span>
+                </div>
+            </div>
+        </div>
+ 
+        <section class="gaming-videos" id="videos">
+            <div class="container">
+                <h2 class="section-title">LEGENDARY GAMEPLAY</h2>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="assets/video1-poster.jpg">
+                                <source src="assets/escobar-gameplay-1.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3>EPIC SQUAD WIPE</h3>
+                        <p>Watch Escobar eliminate an entire squad with precision</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="assets/video2-poster.jpg">
+                                <source src="assets/escobar-gameplay-2.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3>CLUTCH VICTORY</h3>
+                        <p>I am always victorious, there is no room for loss 🔥</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="assets/video3-poster.jpg">
+                                <source src="assets/escobar-gameplay-3.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3>SNIPER MASTERY</h3>
+                        <p>Escobar's professionalism in confrontations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements" id="achievements">
+            <div class="container">
+                <h2 class="section-title">LEGENDARY ACHIEVEMENTS</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>CONQUEROR TITLE</h3>
+                        <p>Reached the highest rank in PUBG Mobile</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>TIKTOK LEGEND</h3>
+                        <p>Viral gaming content creator</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>SQUAD LEADER</h3>
+                        <p>Leading teams to victory</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>LIGHTNING FAST</h3>
+                        <p>Quick scope master</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; ESCOBAR - THE LEGEND NEVER DIES & Abu Ali</p>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@q9999x" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
