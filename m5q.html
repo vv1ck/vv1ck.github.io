@@ -8,6 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="top-nav" dir="ltr">
+        <div class="container nav-inner">
+            <a href="#" class="brand">M5Q</a>
+            <ul class="nav-links">
+                <li><a href="#tutorial" data-i18n="nav_tutorial">طريقة الدونيشن</a></li>
+                <li><a href="#calculator" data-i18n="nav_calculator">الحاسبة</a></li>
+                <li><a href="#social" data-i18n="nav_accounts">الحسابات</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero-section">
         <div class="container">
             <img src="assetsM5Q/m5q-logo.jpeg" alt="M5Q Logo" class="logo-glow">
@@ -23,10 +34,10 @@
     </header>
 
     <main>
-        <section class="video-tutorial-section">
+        <section class="video-tutorial-section" id="tutorial">
             <div class="container">
                 <h2><span data-i18n="video_title">شرح طريقة الدونيشن</span></h2>
-                <p data-i18n="video_desc">شاهد الفيديو التعليمي لتتعلم كيفية الدونيشن بسهولة</p>
+                <p data-i18n="video_desc">شاهد الفيديو لتعرف كيفية ارسال الدونيشن الى حساب ابو اللول</p>
                 <div class="video-container">
                     <div class="video-placeholder">
                         <span class="icon">&#127918;</span>
@@ -37,7 +48,7 @@
             </div>
         </section>
 
-        <section class="currency-converter-section">
+        <section class="currency-converter-section" id="calculator">
             <div class="container">
                 <h2><span data-i18n="converter_title">حاسبة تحويل العملات</span></h2>
                 <p data-i18n="converter_desc">احسب قيمة دعمك بالليرة التركية لتسهيل عملية الدونيشن</p>
@@ -67,7 +78,7 @@
             </div>
         </section>
 
-        <section class="social-links-section">
+        <section class="social-links-section" id="social">
             <div class="container">
                 <h2 data-i18n="social_title">تابع M5Q على وسائل التواصل</h2>
                 <p data-i18n="social_desc">لا تفوت أحدث البثوث والمحتوى الحصري</p>
@@ -78,6 +89,7 @@
                         <a href="https://www.tiktok.com/@m5q.pg?_t=ZS-8zI7j2N3h2K&_r=1" target="_blank" class="btn-fire" data-i18n="visit_tiktok">زيارة TikTok</a>
                     </div>
                     <div class="social-card">
+                        <img src="assetsM5Q/donation.jpg" alt="M5Q Lion" class="social-icon">
                         <h3 data-i18n="donation_title">الدونيشن</h3>
                         <a href="https://donate.bynogame.com/m5q" target="_blank" class="btn-fire" data-i18n="donate_action">ادعم الآن</a>
                     </div>
