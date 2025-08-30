@@ -18,8 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
             badge_live_streamer: '🔴 ستريمر مباشر',
             donate_now: 'ادعم M5Q الآن',
 
+            nav_tutorial: 'طريقة الدونيشن',
+            nav_calculator: 'الحاسبة',
+            nav_accounts: 'الحسابات',
+
             video_title: 'شرح طريقة الدونيشن',
-            video_desc: 'شاهد الفيديو التعليمي لتتعلم كيفية الدونيشن بسهولة',
+            video_desc: 'شاهد الفيديو لتعرف كيفية ارسال الدونيشن الى حساب ابو اللول',
             video_soon: 'قريباً',
             video_info: 'الفيديو سيوضح خطوات التسجيل والدفع في موقع الدعم',
 
@@ -56,8 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
             badge_live_streamer: '🔴 Live Streamer',
             donate_now: 'Donate to M5Q now',
 
+            nav_tutorial: 'How to donate',
+            nav_calculator: 'Calculator',
+            nav_accounts: 'Accounts',
+
             video_title: 'How to donate',
-            video_desc: 'Watch the tutorial to learn how to donate easily',
+            video_desc: 'Watch the video to learn how to send donatioans to Abu Al-loul account',
             video_soon: 'Soon',
             video_info: 'The video will explain the registration and payment steps on the donation site',
 
