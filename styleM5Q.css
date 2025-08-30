@@ -54,6 +54,7 @@ body {
     justify-content: space-between;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    gap: 14px;
 }
 
 /* hide scrollbar for webkit */
@@ -67,6 +68,12 @@ body {
     font-size: 1.2rem;
     text-decoration: none;
     letter-spacing: 1px;
+}
+
+/* ensure the lang button visually fits the navbar height */
+.top-nav .btn-lang {
+    padding: 8px 14px;
+    font-size: 0.95rem;
 }
 
 .top-nav .nav-links {
@@ -755,6 +762,12 @@ footer::before {
     background: linear-gradient(90deg, transparent, var(--fire-orange), transparent);
 }
 
+.video-cta {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .top-nav .nav-links {
@@ -772,6 +785,11 @@ footer::before {
     .top-nav .nav-links a {
         padding: 8px 10px;
         font-size: 0.95rem;
+    }
+
+    .top-nav .btn-lang {
+        padding: 6px 12px;
+        font-size: 0.9rem;
     }
 
     .hero-section {
@@ -846,6 +864,11 @@ footer::before {
 
     .top-nav .nav-links a {
         padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+
+    .top-nav .btn-lang {
+        padding: 6px 10px;
         font-size: 0.85rem;
     }
 
