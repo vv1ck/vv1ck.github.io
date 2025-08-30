@@ -21,6 +21,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Cairo', sans-serif;
     background: linear-gradient(135deg, var(--deep-black) 0%, var(--dark-charcoal) 50%, var(--deep-black) 100%);
@@ -29,6 +33,67 @@ body {
     direction: rtl;
     text-align: right;
     overflow-x: hidden;
+}
+
+/* Top Navigation */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(10, 14, 13, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 107, 53, 0.25);
+    z-index: 1000;
+}
+
+.top-nav .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* hide scrollbar for webkit */
+.top-nav .nav-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.top-nav .brand {
+    color: var(--fire-orange);
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.top-nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.top-nav .nav-links a:hover {
+    color: var(--deep-black);
+    background: linear-gradient(135deg, var(--fire-orange), var(--ember-orange));
+    box-shadow: 0 4px 12px rgba(253, 133, 109, 0.3);
+}
+
+/* ensure content not hidden under fixed nav */
+.hero-section {
+    margin-top: 64px;
 }
 
 /* LTR support when English is selected */
@@ -692,9 +757,27 @@ footer::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .top-nav .nav-links {
+        gap: 12px;
+    }
+
+    .top-nav {
+        height: 56px;
+    }
+
+    .top-nav .brand {
+        font-size: 1rem;
+    }
+
+    .top-nav .nav-links a {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+
     .hero-section {
         padding: 60px 15px;
         min-height: 90vh;
+        margin-top: 56px;
     }
 
     .hero-section h1 {
@@ -716,6 +799,11 @@ footer::before {
 
     main section h2 {
         font-size: 2.2em;
+    }
+
+    /* Nudge video heading up slightly on mobile/tablet */
+    .video-tutorial-section h2 {
+        margin-top: -12px;
     }
 
     .converter-card, .social-card {
@@ -747,6 +835,20 @@ footer::before {
         min-height: 80vh;
     }
 
+    /* tighter navbar spacing and padding on very small screens */
+    .top-nav .container {
+        padding: 10px 12px;
+    }
+
+    .top-nav .nav-links {
+        gap: 8px;
+    }
+
+    .top-nav .nav-links a {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+
     .hero-section img {
         width: 120px;
         height: 120px;
@@ -771,6 +873,11 @@ footer::before {
 
     main section h2 {
         font-size: 1.8em;
+    }
+
+    /* Slightly more nudge on very small phones */
+    .video-tutorial-section h2 {
+        margin-top: -16px;
     }
 
     .converter-card, .social-card {
