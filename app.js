@@ -1,4 +1,3 @@
-// Translation System
 const translations = {
   ar: {
     'mrjoker.bio.title': 'نبذة مختصرة',
@@ -31,13 +30,10 @@ const translations = {
     'badge.design': 'Clean Design'
   }
 }
-
-// Get locale from localStorage or default to 'ar'
+ 
 function getLocale() {
   return localStorage.getItem('mrjoker_locale') || 'ar'
-}
-
-// Set locale
+} 
 function setLocale(locale) {
   localStorage.setItem('mrjoker_locale', locale)
   document.documentElement.lang = locale
@@ -45,34 +41,29 @@ function setLocale(locale) {
   updateTranslations()
   updateSEO(locale)
 }
-
-// Translate text
+ 
 function t(key) {
   const locale = getLocale()
   return translations[locale]?.[key] || key
 }
-
-// Update all translations on page
+ 
 function updateTranslations() {
   const locale = getLocale()
   const dict = translations[locale] || {}
-  
-  // Update elements with data-key attribute
+   
   document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key')
     if (dict[key]) {
       el.textContent = dict[key]
     }
   })
-  
-  // Update lang toggle button
+   
   const langToggle = document.getElementById('lang-toggle')
   if (langToggle) {
     langToggle.textContent = locale === 'ar' ? 'EN' : 'AR'
   }
 }
-
-// Update SEO meta tags
+ 
 function updateSEO(locale) {
   const isAr = locale === 'ar'
   
@@ -83,29 +74,24 @@ function updateSEO(locale) {
   const seoDescription = isAr
     ? 'باحث أمني ومطوّر أدوات هجومية، أركّز على تحويل الأفكار إلى أدوات عملية دقيقة وقابلة للاستخدام الحقيقي، مع اهتمام عالٍ بالأداء، الأمان، والتصميم النظيف. متخصص في Offensive Security، Reverse Engineering، وAutomation.'
     : 'Security researcher and offensive tool developer, focused on turning ideas into precise, real-world usable tools with high attention to performance, security, and clean design. Specialized in Offensive Security, Reverse Engineering, and Automation.'
-  
-  // Update title
+   
   document.title = seoTitle
   const titleMeta = document.getElementById('seo-title')
   if (titleMeta) titleMeta.textContent = seoTitle
-  
-  // Update description
+   
   const descMeta = document.getElementById('seo-description')
   if (descMeta) descMeta.setAttribute('content', seoDescription)
-  
-  // Update Open Graph
+   
   const ogTitle = document.getElementById('og-title')
   if (ogTitle) ogTitle.setAttribute('content', seoTitle)
   const ogDesc = document.getElementById('og-description')
   if (ogDesc) ogDesc.setAttribute('content', seoDescription)
-  
-  // Update Twitter
+   
   const twitterTitle = document.getElementById('twitter-title')
   if (twitterTitle) twitterTitle.setAttribute('content', seoTitle)
   const twitterDesc = document.getElementById('twitter-description')
   if (twitterDesc) twitterDesc.setAttribute('content', seoDescription)
-  
-  // Update structured data
+   
   const structuredData = document.getElementById('structured-data')
   if (structuredData) {
     const data = JSON.parse(structuredData.textContent)
@@ -113,9 +99,7 @@ function updateSEO(locale) {
     data.description = seoDescription
     structuredData.textContent = JSON.stringify(data)
   }
-}
-
-// Load GitHub Stats
+} 
 async function loadGitHubStats() {
   try {
     const [userRes, reposRes] = await Promise.all([
@@ -136,28 +120,22 @@ async function loadGitHubStats() {
       followers: user.followers || 0,
       following: user.following || 0
     }
-    
-    // Update DOM
+     
     document.getElementById('stat-repos').textContent = stats.repos
     document.getElementById('stat-stars').textContent = stats.stars
     document.getElementById('stat-followers').textContent = stats.followers
     document.getElementById('stat-following').textContent = stats.following
   } catch (error) {
-    console.error('Failed to load GitHub stats:', error)
-    // Keep the "—" placeholder on error
+    console.error('Failed to load GitHub stats:', error) 
   }
 }
-
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-  // Set current year
+ 
+document.addEventListener('DOMContentLoaded', () => { 
   document.getElementById('current-year').textContent = new Date().getFullYear()
-  
-  // Initialize locale
+   
   const locale = getLocale()
   setLocale(locale)
-  
-  // Setup lang toggle
+   
   const langToggle = document.getElementById('lang-toggle')
   if (langToggle) {
     langToggle.addEventListener('click', () => {
@@ -166,11 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
       setLocale(next)
     })
   }
-  
-  // Load GitHub stats
+   
   loadGitHubStats()
-  
-  // Add fade-in animation to profile card
+   
   const profileCard = document.querySelector('.profile-card')
   if (profileCard) {
     profileCard.style.animation = 'fadeInUp 0.6s ease-out both'
