@@ -1,131 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M5Q - ابو اللول</title>
-    <link rel="stylesheet" href="styleM5Q.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav class="top-nav" dir="ltr">
-        <div class="container nav-inner">
-            <button id="lang-toggle" class="btn-fire btn-lang" aria-label="Toggle language">EN</button>
-            <ul class="nav-links">
-                <li><a href="#tutorial" data-i18n="nav_tutorial">طريقة الدونيشن</a></li>
-                <li><a href="#calculator" data-i18n="nav_calculator">الحاسبة</a></li>
-                <li><a href="#social" data-i18n="nav_accounts">الحسابات</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="hero-section">
-        <div class="container">
-            <img src="assetsM5Q/m5q-logo.jpeg" alt="M5Q Logo" class="logo-glow">
-            <h1 data-i18n="hero_title"></h1>
-            <div class="badges">
-                <span class="badge" data-i18n="badge_pubg">🎮 PUBG Mobile</span>
-                <span class="badge" data-i18n="badge_tiktok_creator">🔥 TikTok Creator</span>
-                <span class="badge" data-i18n="badge_live_streamer">🔴 Live Streamer</span>
-            </div>
-            <a href="#tutorial" class="btn-fire" data-i18n="nav_tutorial">طريقة الدونيشن</a>
-        </div>
-    </header>
-
-    <main>
-        <section class="video-tutorial-section" id="tutorial">
-            <div class="container">
-                <h2><span data-i18n="video_title">شرح طريقة الدونيشن</span></h2>
-                <p data-i18n="video_desc">شاهد الفيديو لتعرف كيفية ارسال الدونيشن الى حساب ابو اللول</p>
-                <div class="video-container">
-                    <div class="video-placeholder">
-                        <span class="icon">&#127918;</span>
-                        <p data-i18n="video_soon">Soon</p>
-                        <p class="info-text" data-i18n="video_info">الفيديو سيوضح خطوات التسجيل والدفع في موقع الدعم</p>
-                    </div>
-                </div>
-                <div class="video-cta">
-                    <a href="https://donate.bynogame.com/m5q" target="_blank" class="btn-fire" data-i18n="donate_action">ادعم الآن</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="currency-converter-section" id="calculator">
-            <div class="container">
-                <h2><span data-i18n="converter_title">حاسبة تحويل العملات</span></h2>
-                <p data-i18n="converter_desc">احسب قيمة دعمك بالليرة التركية لتسهيل عملية الدونيشن</p>
-                <div class="converter-card">
-                    <h3 data-i18n="converter_card_title">محول العملات إلى الليرة التركية</h3>
-                    <div class="input-group">
-                        <label for="amount" data-i18n="label_amount">المبلغ</label>
-                        <input type="number" id="amount" placeholder="أدخل المبلغ">
-                    </div>
-                    <div class="input-group">
-                        <label for="currency" data-i18n="label_currency">العملة</label>
-                        <select id="currency">
-                            <option value="USD" data-i18n="currency_usd">الدولار الأمريكي (USD)</option>
-                            <option value="SAR" data-i18n="currency_sar">الريال السعودي (SAR)</option>
-                            <option value="QAR" data-i18n="currency_qar">الريال القطري (QAR)</option>
-                            <option value="KWD" data-i18n="currency_kwd">الدينار الكويتي (KWD)</option>
-                        </select>
-                    </div>
-                    <button id="convert-btn" class="btn-fire" data-i18n="btn_convert">احسب المبلغ</button>
-                    <div class="result-box">
-                        <p data-i18n="result_title">المبلغ بالليرة التركية:</p>
-                        <p id="converted-amount" class="text-fire">0.00 TRY</p>
-                        <p id="exchange-rate-info" class="info-text"></p>
-                        <p id="last-update" class="info-text"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="social-links-section" id="social">
-            <div class="container">
-                <h2 data-i18n="social_title">تابع M5Q على وسائل التواصل</h2>
-                <p data-i18n="social_desc">لا تفوت أحدث البثوث والمحتوى الحصري</p>
-                <div class="social-cards">
-                    <div class="social-card">
-                        <img src="assetsM5Q/tiktok.png" alt="M5Q Lion" class="social-icon">
-                        <h3>TikTok</h3>
-                        <a href="https://www.tiktok.com/@m5q.pg?_t=ZS-8zI7j2N3h2K&_r=1" target="_blank" class="btn-fire" data-i18n="visit_tiktok">زيارة TikTok</a>
-                    </div>
-                    <div class="social-card">
-                        <img src="assetsM5Q/donation.jpg" alt="M5Q Lion" class="social-icon">
-                        <h3 data-i18n="donation_title">الدونيشن</h3>
-                        <a href="https://donate.bynogame.com/m5q" target="_blank" class="btn-fire" data-i18n="donate_action">ادعم الآن</a>
-                    </div>
-                    <div class="social-card">
-                        <img src="assetsM5Q/jaco.png" alt="M5Q Lion" class="social-icon">
-                        <h3>Jaco Live</h3>
-                        <a href="https://jaco.live/@m5q_pg?uid=3003917159" target="_blank" class="btn-fire" data-i18n="visit_jaco">زيارة Jaco Live</a>
-                    </div>
-                    <div class="social-card">
-                        <img src="assetsM5Q/kick.jpg" alt="M5Q Lion" class="social-icon">
-                        <h3>Kick</h3>
-                        <a href="https://kick.com/m5q-pg" target="_blank" class="btn-fire" data-i18n="visit_kick">زيارة Kick</a>
-                    </div>
-                    <div class="social-card">
-                        <img src="assetsM5Q/instagram.png" alt="M5Q Lion" class="social-icon">
-                        <h3>Instagram</h3>
-                        <a href="https://www.instagram.com/m5q.pg/" target="_blank" class="btn-fire" data-i18n="visit_instagram">زيارة Instagram</a>
-                    </div>
-                    <div class="social-card">
-                        <img src="assetsM5Q/youtuber.jpg" alt="M5Q Lion" class="social-icon">
-                        <h3>Youtube</h3>
-                        <a href="https://www.youtube.com/@m5q_pg" target="_blank" class="btn-fire" data-i18n="visit_youtube">زيارة Youtube</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 M5Q Streamer</p>
-        </div>
-    </footer>
-
-    <script src="scriptM5Q.js"></script>
-</body>
-</html>
